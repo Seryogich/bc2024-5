@@ -69,17 +69,17 @@ app.post('/write', (req, res) => {
 });
 
 
-// app.get('/UploadForm.html', (req, res) => {
-//   res.send(`
-//     <form action="/write" method="post">
-//       <label for="note_name">Note Name:</label>
-//       <input type="text" name="note_name" required>
-//       <label for="note">Note:</label>
-//       <textarea name="note" required></textarea>
-//       <button type="submit">Submit</button>
-//     </form>
-//   `);
-// });
+app.get('/UploadForm.html', (req, res) => {
+  res.send(`
+    <form action="/write" method="post">
+      <label for="note_name">Note Name:</label>
+      <input type="text" name="note_name" required>
+      <label for="note">Note:</label>
+      <textarea name="note" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  `);
+});
 
 
 app.listen(options.port, options.host, () => {
